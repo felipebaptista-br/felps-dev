@@ -1,0 +1,8 @@
+.ui-input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 2.5px solid var(--purple);
+    background-color: transparent;
+    color: var(--white);
+}

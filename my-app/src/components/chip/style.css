@@ -1,0 +1,33 @@
+.ui-chip {
+    height: 150px;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ui-chip:hover {
+    color: var(--white);
+    background: var(--purple);
+    box-shadow: 0 0 10px var(--purple), 0 0 40px var(--purple), 0 0 80px var(--purple);
+}
+
+.ui-chip h1 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.ui-chip p {
+    color: var(--grey);
+}
+
+@media (max-width: 700px) {
+    .ui-chip {
+        padding: 10px;
+    }
+
+    .ui-chip h1 {
+        font-size: 1.5rem;
+    }
+
+}
