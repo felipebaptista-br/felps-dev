@@ -60,9 +60,9 @@
     tslib "^2.4.0"
 
 "@types/node@^20":
-  version "20.10.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.8.tgz#f1e223cbde9e25696661d167a5b93a9b2a5d57c7"
-  integrity sha512-f8nQs3cLxbAFc00vEU59yf9UyGUftkPaLGfvbVOIDdx2i1b8epBqj2aNGyP19fiyXWvlmZ7qC1XLjAzw/OKIeA==
+  version "20.11.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.3.tgz#ac29fba7aeadc74046b02e50758156f4850f1296"
+  integrity sha512-nrlmbvGPNGaj84IJZXMPhQuCMEVTT/hXZMJJG/aIqVL9fKxqk814sGGtJA4GI6hpJSLQjpi6cn0Qx9eOf9SDVg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -79,9 +79,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^18":
-  version "18.2.47"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.47.tgz#85074b27ab563df01fbc3f68dc64bf7050b0af40"
-  integrity sha512-xquNkkOirwyCgoClNk85BjP+aqnIS+ckAJ8i37gAbDs14jfW/J23f2GItAf33oiUPQnqNMALiFeoM9Y5mbjpVQ==
+  version "18.2.48"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.48.tgz#11df5664642d0bd879c1f58bc1d37205b064e8f1"
+  integrity sha512-qboRCl6Ie70DQQG9hhNREz81jqC1cs9EVNcjQ1AU+jH6NFfSAhVVbrrY/+nSF+Bsk4AOwm9Qa61InvMCyV+H3w==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
