@@ -1,95 +1,31 @@
+import { Container, NavBar, Welcome } from '@/components'
+import ArrowLeftIcon from '@/assets/icons/Icon-arrow-right.svg'
 import Image from 'next/image'
-import styles from './page.module.css'
+
+import "./page.css"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      <NavBar.Root>
+        <NavBar.NavLeft>FelpsDev</NavBar.NavLeft>
+        <NavBar.SectionNav>
+          <NavBar.NavLink href='/'>About</NavBar.NavLink>
+          <NavBar.NavLink href='/'>Work</NavBar.NavLink>
+          <NavBar.NavLink href='/'>Career</NavBar.NavLink>
+        </NavBar.SectionNav>
+        <NavBar.NavRight>
+          <Image src={ArrowLeftIcon} className='arrow-left-icon' alt='Arrow Left Icon' />
+          <NavBar.NavLink href='/'>Contact</NavBar.NavLink>
+        </NavBar.NavRight>
+      </NavBar.Root>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <Container.Root>
+        <Welcome.Root
+          title='Webflow developer & UI/UX designer'
+          description='I am a Science and Technology enthusiast. With a five-year background in Software Engineering, I have developed strong skills in building responsive and robust applications. My approach is centered on fundamental principles such as Clean Code, Design Patterns, and the concepts of SOLID, ensuring the delivery of high-quality solutions. I am committed to staying updated with the latest trends and technologies, always seeking to enhance my skills and contribute meaningfully to the projects I am involved in.'
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </Container.Root>
     </main>
   )
 }
