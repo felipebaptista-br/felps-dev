@@ -1,59 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
 
 :root {
-  --black: #151515;
-  --dark-purple: #5516BB;
-  --purple: #6C1BF0;
-  --dark-grey: #242424;
-  --grey: #D9D9D9;
-  --white: #FFFFFF;
+  /* Official Colors */
+  --gray-100: #EFEDFD;
+  --gray-200: #F4F0FF;
+  --gray-300: #030014;
 }
 
-::-webkit-scrollbar {
-  width: 6.5px;
+/* Official Linear Gradients */
+.bg-linear-100 {
+  background: linear-gradient(to bottom, rgba(4, 1, 21, 0), rgba(4, 1, 21, 0.7), rgba(3, 0, 20, 1));
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+.bg-linear-200 {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.12));
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--purple);
-  border-radius: 5px;
+.bg-linear-300 {
+  background: radial-gradient(circle at center, rgba(148, 101, 255, 0.08), rgba(3, 0, 20, 0));
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--dark-purple);
+.bg-linear-400 {
+  background: linear-gradient(to right, rgba(229, 156, 255, 1), rgba(186, 156, 255, 1), rgba(156, 178, 255, 1));
 }
 
-::selection {
-  color: var(--white);
-  background: var(--purple);
+.bg-linear-500 {
+  background: linear-gradient(to right, rgba(236, 236, 236, 1), rgba(186, 156, 255, 1), rgba(156, 178, 255, 1));
+}
+
+.bg-linear-600 {
+  background: linear-gradient(to right, rgba(229, 156, 255, 1), rgba(186, 156, 255, 1), rgba(156, 178, 255, 1));
+}
+
+.bg-linear-700 {
+  background: linear-gradient(to right, rgba(229, 156, 255, 1), rgba(186, 156, 255, 1), rgba(156, 178, 255, 1));
+}
+
+.bg-linear-800 {
+  background: linear-gradient(to right, rgba(252, 114, 255, 1), rgba(143, 104, 255, 1), rgba(72, 123, 255, 1), rgba(44, 217, 255, 1), rgba(44, 255, 204, 1));
+}
+
+.bg-linear-900 {
+  background: linear-gradient(to right, rgba(229, 156, 255, 1), rgba(186, 156, 255, 1), rgba(156, 178, 255, 1));
+}
+
+.bg-linear-1000 {
+  background: linear-gradient(to right, rgba(3, 0, 20, 1), rgba(3, 0, 20, 0.5), rgba(3, 0, 20, 0), rgba(3, 0, 20, 0), rgba(3, 0, 20, 0), rgba(3, 0, 20, 0.5), rgba(3, 0, 20, 1));
+}
+
+.bg-linear-1100 {
+  background: linear-gradient(to right, rgba(121, 255, 191, 1), rgba(164, 121, 255, 1));
+}
+
+.bg-linear-1200 {
+  background: linear-gradient(to bottom, rgba(132, 75, 224, 1), rgba(34, 28, 134, 1));
+}
+
+.bg-linear-1300 {
+  background: linear-gradient(to right, rgba(229, 156, 255, 0.24), rgba(186, 156, 255, 0.24), rgba(156, 178, 255, 0.24));
+}
+
+.bg-linear-1400 {
+  background: linear-gradient(to bottom, rgba(132, 75, 224, 1), rgba(34, 28, 134, 1));
 }
 
 body {
-  max-width: 1000px;
-  margin: auto;
-  padding: auto;
-  background: var(--black);
-}
-
-@media (max-width: 1150px) {
-  body {
-    padding: 0 50px;
-  }
-}
-
-@media (max-width: 700px) {
-  body {
-    max-width: none;
-  }
+  background: var(--gray-300);
 }
