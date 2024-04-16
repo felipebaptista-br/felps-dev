@@ -92,9 +92,9 @@ export interface RepositoryProps {
     created_at: string,
     updated_at: string,
     permissions: {
-        admin: false,
-        push: false,
-        pull: true
+        admin: boolean,
+        push: boolean,
+        pull: boolean
     },
     security_and_analysis: {
         advanced_security: {
