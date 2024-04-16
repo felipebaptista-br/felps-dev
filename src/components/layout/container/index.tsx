@@ -1,15 +1,14 @@
-import { ReactNode } from "react"
+import React from 'react';
+import { ContainerProps } from '@/@types/container';
 
-import "./style.css"
+import './style.css';
 
-interface RootProps {
-    children: ReactNode
-}
+const FullWidth = ({ children, variant, spacing, ...props }: ContainerProps) => {
+    return <div {...props} style={{ gap: spacing }} className={`container-full-width container-full-width-${variant} ${props.className}`}>{children}</div>
+};
 
-function Root({ children }: RootProps) {
-    return <div className='ui-container-root'>{children}</div>
-}
+const AutoWidth = ({ children, variant, spacing, ...props }: ContainerProps) => {
+    return <div {...props} style={{ gap: spacing }} className={`container-auto-width container-auto-width-${variant} ${props.className}`}>{children}</div>
+};
 
-export {
-    Root
-}
+export { FullWidth, AutoWidth };

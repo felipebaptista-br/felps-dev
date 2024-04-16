@@ -1,53 +1,27 @@
-import { ReactNode } from 'react'
-import Link from 'next/link'
+import React from 'react';
+import { NavBarProps } from '@/@types/navbar';
+import Link from 'next/link';
 
-import './style.css'
+import './style.css';
 
-interface RootProps {
-    children: ReactNode
-}
+const Root = ({ children, ...props }: NavBarProps) => {
+    return <nav {...props} className={`${props.className} nav-bar`}>{children}</nav>
+};
 
-function Root({ children }: RootProps) {
-    return <div className='ui-nav-bar-root'><nav className='ui-nav-bar'>{children}</nav></div>
-}
+const Logo = ({ children, ...props }: NavBarProps) => {
+    return <div {...props} className={`${props.className} nav-bar-logo`}>{children}</div>
+};
 
-interface SectionNavProps {
-    children: ReactNode
-}
+const Menu = ({ children, ...props }: NavBarProps) => {
+    return <div className={`${props.className} nav-bar-menu`}>{children}</div>
+};
 
-function SectionNav({ children }: SectionNavProps) {
-    return <div className='ui-nav-section'>{children}</div>
-}
+const MenuLink = ({ children, href, onClick }: NavBarProps) => {
+    return <Link onClick={onClick} href={`#${href}`} className='nav-bar-menu-link'>{children}</Link>
+};
 
-interface NavLinkProps {
-    children: ReactNode,
-    href: string
-}
+const End = ({ children, ...props }: NavBarProps) => {
+    return <div {...props} className={`${props.className} nav-bar-end`}>{children}</div>
+};
 
-function NavLink({ children, href }: NavLinkProps) {
-    return <Link className='ui-nav-link' href={href}>{children}</Link>
-}
-
-interface NavLeftProps {
-    children: ReactNode
-}
-
-function NavLeft({ children }: NavLeftProps) {
-    return <div className='ui-nav-left'>{children}</div>
-}
-
-interface NavRightProps {
-    children: ReactNode
-}
-
-function NavRight({ children }: NavRightProps) {
-    return <div className='ui-nav-right'>{children}</div>
-}
-
-export {
-    Root,
-    SectionNav,
-    NavLink,
-    NavLeft,
-    NavRight
-}
+export { Root, Logo, Menu, MenuLink, End };

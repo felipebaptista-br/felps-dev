@@ -1,5 +1,30 @@
-.ui-container-root {
-    width: 1250px;
-    height: auto;
-    margin: auto;
+.container-full-width {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-full-width-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-full-width-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-auto-width {
+    width: 1050px;
+}
+
+.container-auto-width-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-auto-width-column {
+    display: flex;
+    flex-direction: column;
 }
